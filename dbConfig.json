@@ -1,0 +1,3 @@
+{
+    "mongoUri" : "mongodb+srv://chinmoy:chinmoy@cluster01.iy7vvhw.mongodb.net/cca?retryWrites=true&w=majority&appName=cluster01"
+}
