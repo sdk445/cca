@@ -83,11 +83,17 @@ const startServer = async (app) => {
             const client = clients.get(clientId);
             if (client && client.readyState === WebSocket.OPEN) {
                 client.send(message);
+
+                
             } else {
                 console.error(`Client ${clientId} is not connected or WebSocket is not open.`);
             }
         };
         eventEmitter.on('sendNotification', (data) => {
+
+            // here we will capture the data and send the notification  to each  users . this is vertically scalable .  
+            // if we need to do it in horizontal manner that is the tuff thing to do  . 
+            // will introduce rabbitMQ to this shortly when i get the time . 
             sendMessageToClient(data.userId);
         });
 

@@ -82,6 +82,7 @@ router.post('/message', authenticateToken, async (req, res) => {
         console.log(getFollowers);
         if(getFollowers) {
             eventEmitter.emit('sendNotification',{data : getFollowers});
+            //here we will have all the followers id and will send the data to server.js section
         }
         res.status(201).send(responseLib.generate(false, 'Message sent successfully', {}));
 
