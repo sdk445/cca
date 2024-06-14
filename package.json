@@ -6,13 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lintFix": "npx eslint . --fix"
+    "lintFix": "npx eslint . --fix",
+    "start": "node app.js"
   },
   "author": "Chinmoy Das",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.19.2",
-    "mongoose": "^8.4.1"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "redis": "^4.6.14",
+    "ws": "^8.17.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
